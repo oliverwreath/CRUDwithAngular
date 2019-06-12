@@ -1,4 +1,5 @@
 # CRUD
+npm install angular-in-memory-web-api  - save-dev
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
 

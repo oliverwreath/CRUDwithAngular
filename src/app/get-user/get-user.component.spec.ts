@@ -1,4 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { GetUserComponent } from './get-user.component';
 
@@ -8,9 +11,14 @@ describe('GetUserComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GetUserComponent ]
-    })
-    .compileComponents();
+      declarations: [GetUserComponent],
+      imports: [
+        RouterTestingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientTestingModule
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

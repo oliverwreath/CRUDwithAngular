@@ -1,4 +1,5 @@
 # AngularCRUD
+[![Build Status](https://travis-ci.org/oliverwreath/CRUDwithAngular.svg?branch=master)](https://travis-ci.org/oliverwreath/CRUDwithAngular)
 npm install angular-in-memory-web-api -save --only=dev
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.

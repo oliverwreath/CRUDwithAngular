@@ -17,10 +17,10 @@ export class DataService {
     headers: this.headers
   };
 
-  constructor(private http: HttpClient) { }                     //Injecting HTTP service to communicate with the data
+  constructor(private http: HttpClient) { }                     // Injecting HTTP service to communicate with the data
 
   private handleError(error: any) {
-    console.error(error);                                       //Created a function to handle and log errors, in case
+    console.error(error);                                       // Created a function to handle and log errors, in case
     return throwError(error);
   }
   getUsers(): Observable<User[]> {
@@ -36,8 +36,8 @@ export class DataService {
     );
     }
 
-    addUser (user: UserFetch): Observable<UserFetch> {
-      user.id=null;
+    addUser(user: UserFetch): Observable<UserFetch> {
+      user.id = null;
       return this.http.post<UserFetch>(this.apiurl, user, this.httpOptions).pipe(
         tap(data => console.log(data)),
         catchError(this.handleError)
@@ -51,7 +51,7 @@ export class DataService {
     );
   }
 
-  updateUser(user: UserFetch): Observable<UserFetch>{
+  updateUser(user: UserFetch): Observable<UserFetch> {
     const url = `${this.apiurl}/${user.id}`;
     return this.http.put<UserFetch>(this.apiurl, user, this.httpOptions).pipe(
       map(() => user),

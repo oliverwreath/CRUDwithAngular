@@ -11,27 +11,27 @@ import { UserFetch } from '../user-fetch';
   templateUrl: './get-user.component.html'
 })
 export class GetUserComponent implements OnInit {
+  constructor(private dataservice: DataService) {}
 
 
   displayData: boolean;
   user: UserFetch;
   users: User[] = [];
-  constructor(private dataservice: DataService){}
-  getUsers(){
+  fetchId = 0;
+
+  idtoUpdate = 0;
+  getUsers() {
     this.dataservice.getUsers().subscribe(data => {
       this.users = data;
     });
   }
-  fetchId = 0;
 
   getUser() {
     this.dataservice.getUser(this.fetchId).subscribe(data => {
       this.user = data;
-     this.displayData=true;
+      this.displayData = true;
     });
   }
-
-  idtoUpdate = 0;
   updateUser() {
     this.dataservice.getUser(this.idtoUpdate).subscribe(data => {
       this.user = data;

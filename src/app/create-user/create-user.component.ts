@@ -13,8 +13,8 @@ export class CreateUserComponent implements OnInit {
   users: User[];
   user: UserFetch;
 
-  constructor(private dataservice: DataService){}
-  getUsers(){
+  constructor(private dataservice: DataService) {}
+  getUsers() {
     this.dataservice.getUsers().subscribe(data => {
       this.users = data;
     });

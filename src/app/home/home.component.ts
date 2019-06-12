@@ -7,7 +7,7 @@ import { UserData } from '../user-data.service';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
- constructor(){}
- ngOnInit(){}
+ constructor() {}
+ ngOnInit() {}
 
 }

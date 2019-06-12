@@ -8,19 +8,19 @@ import { UserFetch } from '../user-fetch';
   templateUrl: './delete-user.component.html'
 })
 export class DeleteUserComponent implements OnInit {
-  users: User[];
-  user: UserFetch;
-  displayData: boolean;
 
 
   constructor(private dataservice: DataService) { }
+  users: User[];
+  user: UserFetch;
+  displayData: boolean;
+ idtodelete = 0;
 
   ngOnInit() {
     this.getUsers();
    // this.getUser();
     this.deleteUser();
   }
- idtodelete=0;
   deleteUser() {
 
     this.dataservice.deleteUser(this.idtodelete).subscribe(data => {
@@ -28,7 +28,7 @@ export class DeleteUserComponent implements OnInit {
     });
   }
 
-  getUsers(){
+  getUsers() {
     this.dataservice.getUsers().subscribe(data => {
       this.users = data;
     });

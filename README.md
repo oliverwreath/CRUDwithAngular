@@ -1,4 +1,5 @@
 # AngularCRUD
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a2a35d355644c779e84088becd87e9c)](https://www.codacy.com/app/oliverwreath/CRUDwithAngular?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=oliverwreath/CRUDwithAngular&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/oliverwreath/CRUDwithAngular.svg?branch=master)](https://travis-ci.org/oliverwreath/CRUDwithAngular)
 
 npm install angular-in-memory-web-api -save --only=dev
